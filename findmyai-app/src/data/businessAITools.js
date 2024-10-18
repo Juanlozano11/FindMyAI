@@ -1,21 +1,18 @@
-const businessAITools = [
-    {
-      category: 'Categoría de Negocios',
-      categoryEn: 'Business Category',
-      tools: [
-        {
-          name: 'Herramienta Empresarial 1',
-          description: 'Descripción de la herramienta en español',
-          descriptionEn: 'Description of the tool in English',
-        },
-        {
-          name: 'Herramienta Empresarial 2',
-          description: 'Descripción de la herramienta en español',
-          descriptionEn: 'Description of the tool in English',
-        },
-      ],
-    },
-  ];
-  
-  export default businessAITools;
-  
+const educationalAITools = [
+  {
+    category: 'Aprendizaje Automático',
+    categoryEn: 'Machine Learning',
+    tools: [
+      {
+        name: 'TensorFlow',
+        description: 'Una biblioteca de código abierto para el aprendizaje automático.',
+        descriptionEn: 'An open-source library for machine learning.',
+        link: 'https://www.tensorflow.org/',
+      },
+      // Add more tools
+    ],
+  },
+  // Add more categories
+];
+
+export default educationalAITools;
