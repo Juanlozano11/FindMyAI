@@ -2,17 +2,37 @@
 
 import { useState, useEffect } from 'react'
 import { Search, ChevronRight, ExternalLink, Star, ArrowLeft, Globe } from 'lucide-react'
-import { Button } from './components/ui/Button'
+import Button  from './components/ui/Button';
 import { Input } from "./components/ui/Input"
 import { Card, CardHeader, CardTitle, CardContent, CardDescription, CardFooter } from "./components/ui/Card"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "./components/ui/tabs"
+import educationalAITools from './data/educationalAITools';
+import businessAITools from './data/businessAITools';
+
 
 
 
 
 // Educational and Business AI Tools data would go here, as well as translations
 
-const translations = { /* Your translations data */ }
+const translations = {
+  es: {
+    title: "Bienvenido a FindMyAI",
+    explore: "Explorar",
+    viewMore: "Ver más",
+    backToCategories: "Volver a categorías",
+    educationalTitle: "Herramientas Educativas",
+    businessTitle: "Herramientas Empresariales",
+  },
+  en: {
+    title: "Welcome to FindMyAI",
+    explore: "Explore",
+    viewMore: "View More",
+    backToCategories: "Back to Categories",
+    educationalTitle: "Educational Tools",
+    businessTitle: "Business Tools",
+  }
+};
 
 export default function Component() {
   const [searchTerm, setSearchTerm] = useState("")
