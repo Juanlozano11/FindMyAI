@@ -12,7 +12,7 @@ import './App.css'; // Link to CSS
 // Translations
 const translations = {
   es: {
-    title: 'Bienvenido a FindMyAI',
+    title: 'Bienvenido a FindingMyAI',
     explore: 'Explorar',
     viewMore: 'Ver más',
     backToCategories: 'Volver a categorías',
@@ -20,7 +20,7 @@ const translations = {
     businessTitle: 'Herramientas Empresariales',
   },
   en: {
-    title: 'Welcome to FindMyAI',
+    title: 'Welcome to FindingMyAI',
     explore: 'Explore',
     viewMore: 'View More',
     backToCategories: 'Back to Categories',
