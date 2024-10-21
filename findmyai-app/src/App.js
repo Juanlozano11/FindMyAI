@@ -34,18 +34,22 @@ const ToolCard = ({ tool, category, language, onExplore, updateFavorites, favori
   <Card key={tool.name} className="card">
     <CardHeader>
       <CardTitle className="card-title">{tool.name}</CardTitle>
-      <p>{category}</p>
+    
     </CardHeader>
     <CardContent className="card-content">
       {language === 'es' ? tool.description : tool.descriptionEn}
+      
     </CardContent>
     <CardFooter className="card-footer">
       <Button onClick={() => onExplore(tool.link)}>
         {language === 'es' ? 'Explorar' : 'Explore'} <ExternalLink />
       </Button>
       <Button onClick={() => updateFavorites(tool)}>
-        {favorites.some(fav => fav.name === tool.name) ? 'Remove from Favorites' : 'Add to Favorites'}
-      </Button>
+  {favorites.some(fav => fav.name === tool.name)
+    ? language === 'es' ? 'Eliminar de favoritos' : 'Remove from Favorites'
+    : language === 'es' ? 'Añadir a favoritos' : 'Add to Favorites'}
+</Button>
+
     </CardFooter>
   </Card>
 );
