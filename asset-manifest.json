@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/FindMyAI/static/css/main.ddc5c4d6.css",
-    "main.js": "/FindMyAI/static/js/main.d6012601.js",
+    "main.js": "/FindMyAI/static/js/main.5a4e927d.js",
     "static/js/453.67269096.chunk.js": "/FindMyAI/static/js/453.67269096.chunk.js",
     "index.html": "/FindMyAI/index.html",
     "main.ddc5c4d6.css.map": "/FindMyAI/static/css/main.ddc5c4d6.css.map",
-    "main.d6012601.js.map": "/FindMyAI/static/js/main.d6012601.js.map",
+    "main.5a4e927d.js.map": "/FindMyAI/static/js/main.5a4e927d.js.map",
     "453.67269096.chunk.js.map": "/FindMyAI/static/js/453.67269096.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ddc5c4d6.css",
-    "static/js/main.d6012601.js"
+    "static/js/main.5a4e927d.js"
   ]
 }
