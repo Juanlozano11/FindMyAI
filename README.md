@@ -1,4 +1,4 @@
-# FindingMyAI : www.findingmyai
+# FindingMyAI : https://findingmyai.com/
 
 
 ## This is a web application built with React that provides an intuitive interface for exploring various AI tools. The application allows users to search for and explore AI tools across different categories, including Educational Tools and Business Tools. Users can also save their favorite tools for quick access.
