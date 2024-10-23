@@ -163,6 +163,11 @@ button {
   transition: background-color 0.5s cubic-bezier(0.86, 0, 0.07, 1), transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
+/* Smaller font size for Explore button */
+.explore-button {
+  font-size: 0.875rem;  /* Adjust the size to your preference */
+}
+
 button:hover {
   background: linear-gradient(45deg, #005bb5, #009edb);
   transform: translateY(-6px) scale(1.05);
@@ -212,4 +217,32 @@ button:focus {
   input[type="text"] {
     padding: 12px;
   }
+}
+
+/* Categoría: Herramientas Educativas */
+.educational-tools {
+  background-color: #4682b4; /* Steel Blue */
+  color: rgb(140, 219, 163);
+}
+
+.educational-tools .card-title {
+  color: #7fe1bd; /* Royal Blue */
+}
+
+.educational-tools:hover {
+  background-color: #5f9ea0; /* Cadet Blue */
+}
+
+/* Categoría: Herramientas Empresariales */
+.business-tools {
+  background-color: #ffffff; /* Coral */
+  color: rgb(107, 158, 223);
+}
+
+.business-tools .card-title {
+  color: #4879ed; /* Orange Red */
+}
+
+.business-tools:hover {
+  background-color: #e4e8efc5; /* Tomato */
 }
