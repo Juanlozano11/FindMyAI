@@ -33,12 +33,51 @@ const translations = {
   },
 };
 
-// ToolCard Component
-const ToolCard = ({ tool, category, language, onExplore, updateFavorites, favorites }) => (
-  <Card
-    key={tool.name}
-    className={`card ${category === 'educational' ? 'educational-tools' : 'business-tools'}`} // Assign correct class
-  >
+const FavoritesToolCard = ({ tool, language, onExplore, updateFavorites }) => (
+  <Card className="card favorite-tool-card">
+    <CardHeader>
+      <CardTitle className="card-title">{tool.name}</CardTitle>
+    </CardHeader>
+    <CardContent className="card-content">
+      {language === 'es' ? tool.description : tool.descriptionEn}
+    </CardContent>
+    <CardFooter className="card-footer">
+      <Button onClick={() => onExplore(tool.link)} className="explore-button">
+        {language === 'es' ? 'Explorar' : 'Explore'} <ExternalLink />
+      </Button>
+      <Button onClick={() => updateFavorites(tool)}>
+        {language === 'es' ? 'Eliminar de favoritos' : 'Remove from Favorites'}
+      </Button>
+    </CardFooter>
+  </Card>
+);
+
+
+
+const EducationalToolCard = ({ tool, language, onExplore, updateFavorites, favorites }) => (
+  <Card className="card educational-tools">
+    <CardHeader>
+      <CardTitle className="card-title">{tool.name}</CardTitle>
+    </CardHeader>
+    <CardContent className="card-content">
+      {language === 'es' ? tool.description : tool.descriptionEn}
+    </CardContent>
+    <CardFooter className="card-footer">
+      <Button onClick={() => onExplore(tool.link)} className="explore-button">
+        {language === 'es' ? 'Explorar' : 'Explore'} <ExternalLink />
+      </Button>
+      <Button onClick={() => updateFavorites(tool)}>
+        {favorites.some(fav => fav.name === tool.name)
+          ? language === 'es' ? 'Eliminar de favoritos' : 'Remove from Favorites'
+          : language === 'es' ? 'Añadir a favoritos' : 'Add to Favorites'}
+      </Button>
+    </CardFooter>
+  </Card>
+);
+
+// BusinessToolCard Component
+const BusinessToolCard = ({ tool, language, onExplore, updateFavorites, favorites }) => (
+  <Card className="card business-tools">
     <CardHeader>
       <CardTitle className="card-title">{tool.name}</CardTitle>
     </CardHeader>
@@ -157,7 +196,7 @@ export default function App() {
           ) : (
             <div className="cards-container">
               {favorites.map(tool => (
-                <ToolCard
+                <FavoritesToolCard
                   key={tool.name}
                   tool={tool}
                   category="Favorites"
@@ -188,6 +227,9 @@ export default function App() {
             </div>
           )}
 
+          
+          
+
           <h2>{t.businessTitle}</h2>
           {filteredBusinessCategories.length === 0 ? (
             <p>No business tools found for "{searchTerm}".</p>
@@ -212,7 +254,7 @@ export default function App() {
           ) : (
             <div className="cards-container">
               {filteredTools.map(tool => (
-                <ToolCard
+                <BusinessToolCard
                   key={tool.name}
                   tool={tool}
                   category={selectedCategory.category.toLowerCase()}  // Ensure case matches with class
@@ -224,8 +266,30 @@ export default function App() {
               ))}
             </div>
           )}
-        </div>
+        </div> )
+
+        ( <div>
+        <Button onClick={() => setSelectedCategory(null)}>{t.backToCategories}</Button>
+        {filteredTools.length === 0 ? (
+          <p>No tools found in this category for "{searchTerm}".</p>
+        ) : (
+          <div className="cards-container">
+            {filteredTools.map(tool => (
+              <EducationalToolCard
+                key={tool.name}
+                tool={tool}
+                category={selectedCategory.category.toLowerCase()}  // Ensure case matches with class
+                language={language}
+                onExplore={handleExplore}
+                updateFavorites={updateFavorites}
+                favorites={favorites}
+              />
+            ))}
+          </div> 
+        )}
+      </div>
       )}
     </div>
   );
 }
+

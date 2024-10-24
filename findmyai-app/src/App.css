@@ -218,31 +218,47 @@ button:focus {
     padding: 12px;
   }
 }
-
 /* Categoría: Herramientas Educativas */
 .educational-tools {
-  background-color: #4682b4; /* Steel Blue */
-  color: rgb(140, 219, 163);
+  background-color: #ffffff; /* White */
+  color: rgb(107, 158, 223); /* Light Blue */
 }
 
 .educational-tools .card-title {
-  color: #7fe1bd; /* Royal Blue */
+  color: #4879ed; /* Dark Blue */
 }
 
 .educational-tools:hover {
-  background-color: #5f9ea0; /* Cadet Blue */
+  background-color: #e4e8efc5; /* Light Grayish Blue */
+  transition: background-color 0.3s ease;
 }
 
 /* Categoría: Herramientas Empresariales */
 .business-tools {
-  background-color: #ffffff; /* Coral */
-  color: rgb(107, 158, 223);
+  background-color: #ffffff; /* White */
+  color: rgb(107, 158, 223); /* Light Blue */
 }
 
 .business-tools .card-title {
-  color: #4879ed; /* Orange Red */
+  color: #4879ed; /* Dark Blue */
 }
 
 .business-tools:hover {
-  background-color: #e4e8efc5; /* Tomato */
+  background-color: #e4e8efc5; /* Light Grayish Blue */
+  transition: background-color 0.3s ease;
+}
+
+/* Favoritos */
+.favorite-tool-card {
+  background-color: #f1f3ff; /* White */
+  color: rgb(107, 158, 223); /* Light Blue */
+}
+
+.favorite-tool-card .card-title {
+  color: #4d59d8; /* Dark Orange */
+}
+
+.favorite-tool-card:hover {
+  background-color: #e4e8efc5; /* Light Grayish Blue */
+  transition: background-color 0.3s ease;
 }
